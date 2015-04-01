@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>JavaScript data structures</title>
-    <link rel="stylesheet" type="text/css" href="../../css/styles.css"/>
-    <script type="text/javascript" src="../../lib/d3.js"></script>
+    <link rel="stylesheet" type="text/css" href="../d3-cookbook/css/styles.css"/>
+    <script type="text/javascript" src="../d3-cookbook/lib/d3.js"></script>
 </head>
 
 <body>
@@ -72,9 +72,9 @@ a.reverse()   // reverse() method reverses the order of elements
 // The "this" keyword refers to the object on which the method is defined
 // console.log(points);
 
-points.dist = function() {
-	var p1 = this[0];
-	var p2 = this[1];
+function dist(points) {
+	var p1 = points[0];
+	var p2 = points[1];
 	var a = p2.x-p1.x;
 	var b = p2.y-p1.y;
 	return Math.sqrt(a*a + b*b); //Pythagorean theorem
