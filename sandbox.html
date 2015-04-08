@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sandbox</title>
+    <link rel="stylesheet" type="text/css" href="sandbox.css"/>
+    <script type="text/javascript" src="d3/d3.v3.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var dataset = [];
+		for (var i = 0; i < 25; i++) {   //Loop 25 times
+	    	var newNumber = Math.round(Math.random() * 30);
+	    	dataset.push(newNumber);  //Add new number to array
+		}
+
+		d3.select("body")
+			.selectAll("p")
+			.data(dataset)
+			.enter()
+			.append("p")
+			.text(function(d) {return(d);});
+		d3.select("body")
+			.selectAll("div")
+			.data(dataset)
+			.enter()
+			.append("div")
+			.attr("class","bar")
+			.style("height",function(d) {return(d*5+"px");})
+			.style("margin-right","2px");	
+    </script>
+<svg width="50" height="50">
+    <circle cx="25" cy="25" r="22"
+     fill="blue" stroke="gray" stroke-width="2"/>
+</svg>
+<div class="bar">
+</div>
+</body>
+</html>
