@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Jeff's Magic Map</title>
+    <title>NYC Gentrification Indicators</title>
     <style type="text/css">
 
 .puma path{
@@ -28,6 +28,11 @@ div.mouseover{
 
 h2 {
 	font-family: arial;
+  font-size: 20pt;
+}
+
+select {
+  font-size: 16pt;
 }
 
 /*svg {
@@ -58,7 +63,7 @@ h2 {
   <td>
     <div id="map"></div>
   </td>
-  <td>
+  <td width=450px>
 <div id="selections">
 <select id="variable">
 <option value="MHI">Median Household Income</option>
@@ -68,10 +73,9 @@ h2 {
 <option value="OCC">Occupational Prestige</option>
 <option value="EDU">Educational Attainment</option>
 <option value="UTF">Young Adult Population</option>
-<option value="WHT">Percent White</option>
+<option value="WHT">White Population</option>
 <option value="NDX">Gentrification Index</option>
 </select>
-<br><br>
 
 <select id="year">
 <option value="yr05">2005</option>
@@ -82,8 +86,20 @@ h2 {
 <option value="yr10">2010</option>
 <option value="yr11">2011</option>
 <option value="trnd">Trend</option>
-</select>
-</div>
+</select></div>
+<br><br>
+My research identified eight primary demographic and housing indicators of gentrification. They are: 
+<ul>
+<li><strong>Median Household Income</strong> - median total income by household.</li>
+<li><strong>Median Gross Rent</strong> - median amount paid for all rental costs, among all resident renters.</li>
+<li><strong>Median Home Value</strong> - median home value among all resident home owners.</li>
+<li><strong>Residential Mobility</strong> - percent of residents who moved into their current residence in the past five years.</li>
+<li><strong>Occupational Prestige</strong> - percent of residents with managerial, professional, or technical careers.</li>
+<li><strong>Educational Attainment</strong> - percent of residents who have at least some college education.</li>
+<li><strong>Young Adult Population</strong> - percent of residents who are aged 18 to 35.</li>
+<li><strong>White Population</strong> - percent of residents who are non-Hispanic white/Caucasian.</li>
+</ul>
+To get a holistic picture of gentrification, I normalized and combined these figures in the <strong>Gentrification Index</strong> measure. For each of these nine metrics, data is available for each year between 2005 and 2011, inclusive. To emphasize the focus on change over time, I included a "Trend" year label which shows the difference between the last and the first years in the study. All data is courtesy of the United States Census Bureau's Public Use Microdata Samples.
   </td>
 
 </tr>
